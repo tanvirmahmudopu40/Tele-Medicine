@@ -15,12 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views
 
+# from telemedicine.forms import UserLoginForm
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-
+# path(
+#         'login/',
+#         views.LoginView.as_view(
+#             template_name="login.html",
+#             authentication_form=UserLoginForm
+#             ),
+#         name='login')
 ]
